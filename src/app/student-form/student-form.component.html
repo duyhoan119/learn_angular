@@ -1,0 +1,24 @@
+<p>student-form works!</p>
+<div>
+  <form action="" #studentFrom="ngForm" (ngSubmit)="onsubmit(student)">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="student.name" required="" #name="ngModel"
+        class="form-control" minlenght="6" maxlenght="32">
+    </div>
+    <div class="form-group">
+      <label for="class">class</label>
+      <input type="text" id="class" name="classId" [(ngModel)]="student.classId" required="" #clasId="ngModel"
+        class="form-control" minlenght="6" maxlenght="32">
+    </div>
+    <div>
+    </div>
+    <div *ngIf="studentFrom.form.dirty" class="text-danger">
+      <p *ngIf="name.errors?.['required']&&clasId.errors?.['required']">Hay nhap tat ca cac truong</p>
+      <p *ngIf="name.errors?.['minlenght']||clasId.errors?.['minlenght']">toi thieu 6 ki tu </p>
+      <p *ngIf="name.errors?.['maxlenght']||clasId.errors?.['maxlenght']">toi da 32 ki tu </p>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="studentFrom.form.invalid">Submit</button>
+  </form>
+</div>

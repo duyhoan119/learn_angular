@@ -1,0 +1,30 @@
+<div class="container">
+  <!-- <p>{{product | json}}</p> -->
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- //*ngFor="let product of product" -->
+        <tr  *ngFor="let product  fillterProduct">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <!-- <td>
+              <button type="button" class="btn btn-danger" (click)="edit(product)"> EDIT</button>
+              <button type="button" class="btn btn-success" (click)="remove(product.id)">DELETE</button>
+            </td>  -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "Students": [
+    {
+      "id": 1,
+      "name": "Lò Duy Hoan 4",
+      "classId": "1"
+    },
+    {
+      "id": 2,
+      "name": "hoan1",
+      "age": 19,
+      "classId": 1
+    }
+  ],
+  "Class": [
+    {
+      "id": 1,
+      "name": "WE16304"
+    },
+    {
+      "id": 2,
+      "name": "WE16305"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone",
+      "description": "Description iphone",
+      "price": 1200000
+    },
+    {
+      "id": 2,
+      "name": "Iphone",
+      "description": "Description iphone",
+      "price": 1200000
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StudentService } from '../header/services/student.service';
+import { StudentService } from '../services/student.service';
 
 @Component({
   selector: 'app-student',
@@ -7,27 +7,33 @@ import { StudentService } from '../header/services/student.service';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  students: any;
-  classname: any;
-  id: any;
-  constructor(private studentSevice: StudentService) { }
+  students : any;
+
+  constructor(private studentService: StudentService) { }
 
   ngOnInit(): void {
-    this.studentSevice.getStudents().subscribe((data)=>{
+    this.getListStudents()
+  }
+
+  getListStudents(){
+    this.studentService.getStudents().subscribe((data)=>{
       this.students = data
-      console.log(this.students);
-
     })
-
   }
 
-
-  edit(obj: object){
-
+  remove(id : number){
+    this.studentService.deleteStudent(id).subscribe((data)=>{
+      this.getListStudents()
+    })
   }
 
-  ondelete(id : number){
-
+  parentChangeStatus(newStatus: number, obj: any){
+    this.studentService.changeStatusStudent(status, {
+      ...obj,
+      status: newStatus
+    }).subscribe((data)=>{
+      this.getListStudents()
+    })
   }
 
 }

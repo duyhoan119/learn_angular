@@ -1,0 +1,32 @@
+<h4>post</h4>
+
+<div class="container">
+    <a routerLink="form" class="btn btn-success">ADD +</a>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>content</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let item of posts">
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.content}}</td>
+                <td>{{item.status}}</td>
+                <td >
+                  <!-- <app-status-btn
+                  [status]="posts.status"
+                  (changeStatus)="parentChangeStatus($event, posts)"
+                  ></app-status-btn> -->
+                    <a routerLink="form/{{item.id}}" class="btn btn-primary">Edit</a>
+                    <button class="btn btn-danger mx-4" (click)="remove(item.id)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

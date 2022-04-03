@@ -1,24 +1,30 @@
-<p>student-form works!</p>
-<div>
-  <form action="" #studentFrom="ngForm" (ngSubmit)="onsubmit(student)">
-    <div class="form-group">
-      <label for="name">name</label>
-      <input type="text" id="name" name="name" [(ngModel)]="student.name" required="" #name="ngModel"
-        class="form-control" minlenght="6" maxlenght="32">
-    </div>
-    <div class="form-group">
-      <label for="class">class</label>
-      <input type="text" id="class" name="classId" [(ngModel)]="student.classId" required="" #clasId="ngModel"
-        class="form-control" minlenght="6" maxlenght="32">
-    </div>
-    <div>
-    </div>
-    <div *ngIf="studentFrom.form.dirty" class="text-danger">
-      <p *ngIf="name.errors?.['required']&&clasId.errors?.['required']">Hay nhap tat ca cac truong</p>
-      <p *ngIf="name.errors?.['minlenght']||clasId.errors?.['minlenght']">toi thieu 6 ki tu </p>
-      <p *ngIf="name.errors?.['maxlenght']||clasId.errors?.['maxlenght']">toi da 32 ki tu </p>
+<h3>Student Form</h3>
+<div class="container-fluid">
+    <div class="col-md-6">
+        <form action="" class="form" #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm.value)">
+            <div class="form-group">
+                Name: <input type="text" [(ngModel)]="student.name" class="form-control" name="name" #name="ngModel"
+                    placeholder="name" required minlength="4" maxlength="32">
+                <div class="text-danger" *ngIf="studentForm.form.dirty">
+                    <small *ngIf="name.errors?.['required']">Tên không được để trống</small>
+                    <small *ngIf="name.errors?.['minlength']">Tên tối thiểu 4 kí tự</small>
+                    <small *ngIf="name.errors?.['maxlength']">Tên tối đa 32 kí tự</small>
+                </div>
+            </div>
+            <div class="form-group">
+                class: <input type="text" [(ngModel)]="student.class" class="form-control" name="class" #class="ngModel"
+                    placeholder="class" required minlength="4" maxlength="32">
+                <div class="text-danger" *ngIf="studentForm.form.dirty">
+                    <small *ngIf="class.errors?.['required']">Lớp không được để trống</small>
+                    <small *ngIf="class.errors?.['minlength']">Lớp tối thiểu 4 kí tự</small>
+                    <small *ngIf="class.errors?.['maxlength']">Lớp tối đa 32 kí tự</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success" [disabled]="studentForm.form.invalid">SUBMIT</button>
+            </div>
+
+        </form>
     </div>
 
-    <button class="btn btn-primary" [disabled]="studentFrom.form.invalid">Submit</button>
-  </form>
 </div>

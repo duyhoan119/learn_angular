@@ -1,27 +1,32 @@
+<h3>List Students</h3>
+<a routerLink="form" class="btn btn-success">ADD +</a>
+
 <div class="container">
-  <h1>student</h1>
-  <table>
+  <table class="table table-hover">
     <thead>
       <tr>
         <th>id</th>
         <th>name</th>
-        <th>age</th>
-        <th>class name</th>
+        <th>class</th>
+        <th>Action</th>
+        <th>Status</th>
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let student of students">
-        <td>{{student.id}}</td>
-        <td>{{student.name}}</td>
-        <td>{{student.age}}</td>
-        <td>{{student.classId}}</td>
+    <tbody *ngFor="let item of students">
+      <tr>
+        <td>{{item.id}}</td>
         <td>
-          <a routerLink="/student/detail/{{student.id}}"><button class="btn btn-primary">Detail</button></a>
-          <a routerLink="/student/from/{{student.id}}"><button class="btn btn-warning">EDIT</button></a>
-         <button class="btn btn-danger" (click)="ondelete(student.id)">DELETE</button>
+          <a routerLink="/student/details/{{item.id}}">{{item.name}}</a>
+        </td>
+        <td>{{item.class}}</td>
+        <td>
+          <a routerLink="form/{{item.id}}" class="btn btn-primary">Edit</a>
+          <button class="btn btn-danger mx-4" (click)="remove(item.id)">Remove</button>
+        </td>
+        <td>
+          <app-status-btn [status]="item.status" (changeStatus)="parentChangeStatus($event, item)"></app-status-btn>
         </td>
       </tr>
     </tbody>
   </table>
-
 </div>

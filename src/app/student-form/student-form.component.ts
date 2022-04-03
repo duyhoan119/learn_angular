@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { StudentService } from '../header/services/student.service';
+import { StudentService } from '../services/student.service';
 
 @Component({
   selector: 'app-student-form',
@@ -8,39 +8,40 @@ import { StudentService } from '../header/services/student.service';
   styleUrls: ['./student-form.component.css']
 })
 export class StudentFormComponent implements OnInit {
-  id: string | undefined;
-  public student: any = [];
+
+  student: any
+  id: any
 
   constructor(
-    private route: Router,
-    private studentSevice: StudentService,
+    private studentService: StudentService,
+    private router: Router,
     private activateRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.id = this.activateRoute.snapshot.params['id'];
-    if (this.id) {
-      this.studentSevice.getStudent(this.id).subscribe(data => {
-        this.student = data;
-      });
-      console.log(this.student);
-    }else{
-      this.student = [
+    this.id = this.activateRoute.snapshot.params['id']
+    console.log(this.id);
 
-      ]
-    }
-
-
+    if (this.id)
+      this.studentService.getStudent(this.id).subscribe(data => {
+        this.student = data
+      })
+    else
+      this.student = {
+        name: '',
+        class: ''
+      }
   }
-  onsubmit(obj: { name: string, class: string }) {
-    console.log(obj);
 
-    this.studentSevice.updateStudent(this.id, obj).subscribe(data => {
-      //chuyển hướng đường dẫn
-      this.route.navigate(['/student']);
-    })
-
-
+  onSubmit(obj: any) {
+    if (this.id)
+      this.studentService.updateStudent(this.id, obj).subscribe(data => {
+        this.router.navigate(['admin/students'])
+      })
+    else
+      this.studentService.createStudent(obj).subscribe(data => {
+        this.router.navigate(['admin/students'])
+      })
   }
 
 }

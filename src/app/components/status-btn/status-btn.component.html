@@ -1,0 +1,10 @@
+<button
+    *ngIf="status === 0"
+    class="btn btn-danger"
+    (click)="onChangeStatus(1)"
+>Hide</button>
+<button
+    *ngIf="status === 1"
+    class="btn btn-info"
+    (click)="onChangeStatus(0)"
+>Show</button>

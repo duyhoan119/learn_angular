@@ -1,15 +1,14 @@
 {
   "Students": [
     {
-      "id": 1,
-      "name": "Lò Duy Hoan 4",
-      "classId": "1"
+      "name": "hoan1",
+      "class": "qqqqqqqqq111",
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "hoan1",
-      "age": 19,
-      "classId": 1
+      "name": "Lò Duy Hoan1",
+      "class": "qqqqqq",
+      "id": 3
     }
   ],
   "Class": [
@@ -22,18 +21,37 @@
       "name": "WE16305"
     }
   ],
-  "products": [
+  "products": [],
+  "posts": [
     {
-      "id": 1,
-      "name": "Iphone",
-      "description": "Description iphone",
-      "price": 1200000
+      "title": "asssasss",
+      "content": "asdsddddsswssss",
+      "status": "1",
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Iphone",
-      "description": "Description iphone",
-      "price": 1200000
+      "title": "aduvip1",
+      "content": "m muon hut thuoc1",
+      "status": "1",
+      "id": 3
+    },
+    {
+      "title": "1232434",
+      "conten": "adu vip",
+      "status": "0",
+      "id": 6
+    },
+    {
+      "title": "1234334",
+      "conten": "adu gắt",
+      "status": "1",
+      "id": 7
+    },
+    {
+      "title": "123",
+      "content": "12323442",
+      "status": "1",
+      "id": 9
     }
   ]
 }

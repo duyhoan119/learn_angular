@@ -22,11 +22,9 @@ export class ProductService {
   deleteproduct(id : number){
     return this.http.delete(`${apiUrl}/${id}`)
   }
-
   createproduct(obj: any){
-    return this.http.post(apiUrl, obj)
+    return this.http.post(apiUrl,obj)
   }
-
   updateproduct(id: number, obj: any){
     return this.http.put(`${apiUrl}/${id}`, obj)
   }

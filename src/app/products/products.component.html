@@ -1,30 +1,13 @@
-<!-- {{productsForm.value| json}} <br>
-{{newProduct | json}} -->
 
 <div class="container mt-5">
   <h3>List Products</h3>
-  <!--
-  <div class="row">
-    <div class="col-lg-6 col-md12">
-
-      <form #productsForm="ngForm" (ngSubmit)="onSubmit(productsForm.value)">
-        <input type="text" [(ngModel)]="newProduct.name" name="name" placeholder="Tên" class="form-control" />
-
-        <input type="text" [(ngModel)]="newProduct.des" name="des" placeholder="Mô tả" class="form-control" />
-
-        <input type="number" [(ngModel)]="newProduct.price" name="price" placeholder="Giá" class="form-control" />
-
-        <button class="btn btn-primary my-4" type="submit" [disabled]="!onValidate(productsForm.value)">SUBMIT</button>
-      </form>
-
-    </div>
-  </div> -->
   <a routerLink="form"><button class="btn btn-success">ADD +</button> </a>
 
     <div class="container">
       <table class="table table-hover">
         <thead>
           <tr>
+            <th>ID</th>
             <th scope="col">Tên sp</th>
             <th scope="col">Mô tả</th>
             <th scope="col">Giá</th>
@@ -38,6 +21,7 @@
               <a routerLink="/student/details/{{item.id}}">{{item.name}}</a>
             </td>
             <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
             <td>
               <a routerLink="form/:id"><button class="btn btn-primary">Edit</button>
               </a>

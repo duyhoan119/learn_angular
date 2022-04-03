@@ -9,8 +9,6 @@ import { StudentService } from '../services/student.service';
   styleUrls: ['./product-form.component.css']
 })
 export class ProductFormComponent implements OnInit {
-
-
   student: any
   id: any
 
@@ -23,15 +21,17 @@ export class ProductFormComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activateRoute.snapshot.params['id']
     console.log(this.id);
-
     if (this.id)
       this.studentService.getproduct(this.id).subscribe(data => {
         this.student = data
+        console.log(this.student);
+
       })
     else
       this.student = {
         name: '',
-        class: ''
+        description: '',
+        price: ''
       }
   }
 

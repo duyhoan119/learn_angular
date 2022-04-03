@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
   }
   remove(id: number) {
     this.Productsevice.deleteproduct(id).subscribe((data) => {
-      this.route.navigate(['/admin/products'])
+      this.ngOnInit()
     })
   }
   // onSubmit(formValue: any) {

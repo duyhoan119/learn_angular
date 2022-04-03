@@ -21,20 +21,21 @@
       "name": "WE16305"
     }
   ],
-  "products": [],
-  "posts": [
+  "products": [
     {
-      "title": "asssasss",
-      "content": "asdsddddsswssss",
-      "status": "1",
+      "name": "Lò Duy Hoan1",
+      "description": "dấnnsdndandsads",
+      "price": "2432134244",
+      "id": 1
+    },
+    {
+      "name": "Lò Duy Hoan1",
+      "description": "dấnnsdndandsads",
+      "price": "20000000",
       "id": 2
-    },
-    {
-      "title": "aduvip1",
-      "content": "m muon hut thuoc1",
-      "status": "1",
-      "id": 3
-    },
+    }
+  ],
+  "posts": [
     {
       "title": "1232434",
       "conten": "adu vip",
@@ -46,12 +47,6 @@
       "conten": "adu gắt",
       "status": "1",
       "id": 7
-    },
-    {
-      "title": "123",
-      "content": "12323442",
-      "status": "1",
-      "id": 9
     }
   ]
 }

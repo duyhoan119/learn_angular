@@ -4,7 +4,7 @@
         <form action="" class="form" #studentForm="ngForm" (ngSubmit)="onSubmit(studentForm.value)">
             <div class="form-group">
                 Name: <input type="text" [(ngModel)]="student.name" class="form-control" name="name" #name="ngModel"
-                    placeholder="name" required minlength="4" maxlength="32">
+                    placeholder="name" required minlength="4" maxlength="32" [value]="student.name">
                 <div class="text-danger" *ngIf="studentForm.form.dirty">
                     <small *ngIf="name.errors?.['required']">Tên không được để trống</small>
                     <small *ngIf="name.errors?.['minlength']">Tên tối thiểu 4 kí tự</small>
@@ -12,8 +12,8 @@
                 </div>
             </div>
             <div class="form-group">
-                description: <input type="text" [(ngModel)]="student.class" class="form-control" name="description" #class="ngModel"
-                    placeholder="class" required minlength="4" maxlength="32">
+                description: <input type="text" [(ngModel)]="student.description" class="form-control" name="description" #class="ngModel"
+                    placeholder="description" required minlength="4" maxlength="32" [value]="student.description">
                 <div class="text-danger" *ngIf="studentForm.form.dirty">
                     <small *ngIf="class.errors?.['required']">Lớp không được để trống</small>
                     <small *ngIf="class.errors?.['minlength']">Lớp tối thiểu 4 kí tự</small>
@@ -21,8 +21,8 @@
                 </div>
             </div>
             <div class="form-group">
-                price: <input type="text" [(ngModel)]="student.class" class="form-control" name="price" #class="ngModel"
-                    placeholder="class" required minlength="4" maxlength="32">
+                price: <input type="number" [(ngModel)]="student.price" class="form-control" name="price" #class="ngModel"
+                    placeholder="price" required minlength="4" maxlength="32" [value]="student.price">
                 <div class="text-danger" *ngIf="studentForm.form.dirty">
                     <small *ngIf="class.errors?.['required']">Lớp không được để trống</small>
                     <small *ngIf="class.errors?.['minlength']">Lớp tối thiểu 4 kí tự</small>
@@ -32,7 +32,6 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-success" [disabled]="studentForm.form.invalid">SUBMIT</button>
             </div>
-
         </form>
     </div>
 

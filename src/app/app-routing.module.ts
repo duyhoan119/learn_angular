@@ -14,6 +14,10 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { ClientComponent } from './layouts/client/client.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ClientProductComponent } from './client-product/client-product.component';
+import { ClientPostComponent } from './client-post/client-post.component';
+import { ClientProductDetailComponent } from './client-product-detail/client-product-detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 // const routes: Routes = [
 //   {
@@ -73,19 +77,37 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        component: ClientProductComponent
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent
+      },
+      {
+        path: 'login',
         component: StudentComponent
       },
       {
-        path: 'students',
-        component: StudentComponent
+        path: 'phones',
+        children:[
+          {
+            path: '',
+              component: ClientProductComponent,
+          },
+          {
+            path: 'detail/:id',
+            component: ClientProductDetailComponent
+          }
+        ]
+
       },
       {
-        path: 'products',
-        component: ProductsComponent
+        path: 'detail/:id',
+        component: ClientProductDetailComponent
       },
       {
         path: 'posts',
-        component: PostComponent
+        component: ClientPostComponent
       },
     ]
   },
@@ -119,18 +141,18 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'products',
+        path: 'phones',
         children: [
           {
             path: '',
             component: ProductsComponent,
           },
           {
-            path: 'form',
+            path: 'create',
             component: ProductFormComponent
           },
           {
-            path: 'form/:id',
+            path: 'edit/:id',
             component: ProductFormComponent
           },
           {

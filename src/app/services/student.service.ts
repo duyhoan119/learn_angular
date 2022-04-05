@@ -16,7 +16,7 @@ export class StudentService {
   }
 
   getStudent(id : number){
-    return this.http.get(`${apiUrl}/${id}`)
+    return this.http.get(`${apiUrl}/${id}_expand=class`)
   }
 
   deleteStudent(id : number){

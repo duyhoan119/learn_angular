@@ -31,6 +31,10 @@ import { StatusBtnComponent } from './components/status-btn/status-btn.component
 import { ClientComponent } from './layouts/client/client.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ClientProductComponent } from './client-product/client-product.component';
+import { ClientPostComponent } from './client-post/client-post.component';
+import { ClientProductDetailComponent } from './client-product-detail/client-product-detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -53,7 +57,11 @@ import { ProductFormComponent } from './product-form/product-form.component';
     StatusBtnComponent,
     ClientComponent,
     AdminComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ClientProductComponent,
+    ClientPostComponent,
+    ClientProductDetailComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

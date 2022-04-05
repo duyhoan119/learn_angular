@@ -1,7 +1,7 @@
 
 <div class="container mt-5">
   <h3>List Products</h3>
-  <a routerLink="form"><button class="btn btn-success">ADD +</button> </a>
+  <a routerLink="create"><button class="btn btn-success">ADD +</button> </a>
 
     <div class="container">
       <table class="table table-hover">
@@ -23,7 +23,7 @@
             <td>{{item.description}}</td>
             <td>{{item.price}}</td>
             <td>
-              <a routerLink="form/:id"><button class="btn btn-primary">Edit</button>
+              <a routerLink="edit/:id"><button class="btn btn-primary">Edit</button>
               </a>
               <button class="btn btn-danger mx-4" (click)="remove(item.id)">Remove</button>
             </td>

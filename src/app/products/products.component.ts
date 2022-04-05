@@ -21,9 +21,12 @@ export class ProductsComponent implements OnInit {
     })
   }
   remove(id: number) {
-    this.Productsevice.deleteproduct(id).subscribe((data) => {
-      this.ngOnInit()
-    })
+    if (confirm("bạn muốn xóa sản phẩm") == true) {
+      this.Productsevice.deleteproduct(id).subscribe((data) => {
+        this.ngOnInit()
+      })
+    }
+
   }
   // onSubmit(formValue: any) {
   //     if (this.isEdit) {

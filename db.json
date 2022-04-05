@@ -23,30 +23,54 @@
   ],
   "products": [
     {
-      "name": "Lò Duy Hoan1",
-      "description": "dấnnsdndandsads",
-      "price": "2432134244",
+      "name": "Product1",
+      "description": "good",
+      "price": 20000000,
       "id": 1
     },
     {
-      "name": "Lò Duy Hoan1",
-      "description": "dấnnsdndandsads",
-      "price": "20000000",
+      "name": "Product21",
+      "description": "good",
+      "price": 20000000,
       "id": 2
+    },
+    {
+      "name": "Product1",
+      "description": "good",
+      "price": 20000000,
+      "id": 3
     }
   ],
   "posts": [
     {
-      "title": "1232434",
-      "conten": "adu vip",
+      "title": "Post1",
+      "content": "Các bác cho em xin lời khuyên với a.\nEm đang có cái Laptop có cấu hình bên dưới, định mua thêm cái màn 2k lắp thêm để tiện cho công việc. Với cấu hình như trong ảnh liệu có xuất được ra cái màn 2k ko ạ",
       "status": "0",
-      "id": 6
+      "id": 8
     },
     {
-      "title": "1234334",
-      "conten": "adu gắt",
+      "title": "Post2",
+      "content": "Các bác cho em xin lời khuyên với a.\nEm đang có cái Laptop có cấu hình bên dưới, định mua thêm cái màn 2k lắp thêm để tiện cho công việc. Với cấu hình như trong ảnh liệu có xuất được ra cái màn 2k ko ạ",
+      "status": "0",
+      "id": 9
+    },
+    {
+      "title": "Post3",
+      "content": "Các bác cho em xin lời khuyên với a.\nEm đang có cái Laptop có cấu hình bên dưới, định mua thêm cái màn 2k lắp thêm để tiện cho công việc. Với cấu hình như trong ảnh liệu có xuất được ra cái màn 2k ko ạ",
+      "status": "0",
+      "id": 10
+    },
+    {
+      "title": "Post4",
+      "content": "Các bác cho em xin lời khuyên với a.\nEm đang có cái Laptop có cấu hình bên dưới, định mua thêm cái màn 2k lắp thêm để tiện cho công việc. Với cấu hình như trong ảnh liệu có xuất được ra cái màn 2k ko ạ",
+      "status": "0",
+      "id": 11
+    },
+    {
+      "title": "Post6",
+      "content": "qweeeef",
       "status": "1",
-      "id": 7
+      "id": 12
     }
   ]
 }

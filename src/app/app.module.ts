@@ -35,6 +35,7 @@ import { ClientProductComponent } from './client-product/client-product.componen
 import { ClientPostComponent } from './client-post/client-post.component';
 import { ClientProductDetailComponent } from './client-product-detail/client-product-detail.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { ProfileComponent } from './profile/profile.component';
     ClientProductComponent,
     ClientPostComponent,
     ClientProductDetailComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminProfileComponent
   ],
   imports: [
     BrowserModule,
